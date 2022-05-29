@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>naciye busra-vize ödevi</title>
+    <style>
+        div{
+            margin: 4px;
+            border-width: 3px;
+        }
+    </style>
+</head>
+<script>
+    $(document).ready(function(){
+      //Add a minus icon to the collapse element that is open by default
+          $('.collapse.show').each(function(){
+            $(this).parent().find(".fa").removeClass("fa-plus").addClass("fa-minus");
+        });
+          
+      //Toggle plus/minus icon on show/hide of collapse element
+        $('.collapse').on('shown.bs.collapse', function(){
+            $(this).parent().find(".fa").removeClass("fa-plus").addClass("fa-minus");
+        }).on('hidden.bs.collapse', function(){
+            $(this).parent().find(".fa").removeClass("fa-minus").addClass("fa-plus");
+        });       
+    });
+    </script>
+<body>
+    </pre>
+    <div class="bg-secondary">
+        <h4 class="text-light border border-dark border-top-0  ">COLLAPSE(ÇÖKELEN/AÇILAN)(AKORDEON)</h4>
+        <p><strong><u>Akordeon Sistemi</u>  olarak adlandırılmaktadır.Bir butona veya yazıya tıklandığında, onun altında(genellikle bir uyarı yazısının altında ayrıntı çıkar,çıkmalı da...)
+        veya herhangi bir yerde yer alan <code class="text-light">div</code> kutucuğu geçişli  bir animasyon ile açıp kapatılabilir. Yani gizlenip gösterilebilir.</p> </strong> 
+        <div class="container border-end border-start border-3 border-warning rounded-3 container mb-2 bg-dark">
+            <div>
+                <h4 class="fw-bold text-warning">Tıklandığında Oluşacak gizle/göster Butonu:</h4>
+                <p class="fs-4 text-white fw-bold">Düğmenin tıklatılmasıyla görüntülenen kart metni içeriğidir.Birisi bir düğmeye tıkladığında görüntülemek için buraya başka bileşenler de ekleyebilirsiniz.Buna <mark class="bg-warning">daraltılabilir içerik  </mark>denir.</p>
+                <pre class="fs-4"><code>&lt;</code><code style="color: blue;">button</code> <code style="color:cornflowerblue ;">class=</code><code style="color: orange;">"btn btn-primary"</code> <code style="color: cornflowerblue;">data-toggle=</code><code style="color: orange;">"collapse"</code> <code style="color: cornflowerblue;">data-target=</code><code style="color: orange;">"#collapseExample"</code> <code style="color: cornflowerblue;"></code><code>&gt;<code style="color:black">button</code><code>&gt; </code>
+                </pre>
+                <div class="container">
+                    <div class="collapse" id="collapseExample">
+                        <div class="card">
+                            <div class="card-body">
+                                <strong >Tıklanıldığında görüntülenen kart metin içeriğidir.Birisi  butona tıkladığında görüntülemek için buraya başka şeyler de katabilirsiniz.Buna <u> katlanabilir içerik</u> denir.Yazımızın görünmesini istediğimiz zaman butona tıklamamız yeterli olacaktır.</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <p>
+                        <a class="btn btn-dark" data-toggle="collapse" href="#collapseExample">
+                          Buraya tıklayınız.
+                          <div class="border border-bottom-0"></div>
+                        </a>
+                    </p>
+                </div>
+            </div>
+            <div>
+                <h3 class="fw-bold text-warning">Butona Basıldığında Aşağıya Doğru Bİr Gizleme/Gösterme Hareketi İçin:</h3>
+                <p class="fs-4 text-white fw-bold"><strong> Bu kısımda pek bir fark bulunmamakta aslında yazdıklarımızın yeri önem taşıyor sadece. </strong> </p>
+                <pre class="fs-4"><code>&lt;</code><code style="color: blue;">div</code> <code style="color: cornflowerblue;">class=</code><code style="color: orange;">"container"</code><code>&gt;</code><code >&lt;</code><code style="color: cornflowerblue;">p </code><code>&gt;</code><code>&lt;</code><code>a </code><code style="color: orange;">class=</code> <code style="color: cornflowerblue;">"btn btn-primary"</code><code style="color: orange;"> data-toggle=</code><code  style="color: blue;">"collapse"</code><code style="color: blue;"> href=</code><code>"#collapseExample"</code><code>&gt;</code><code>butona tıklayınız lütfen.</code><code>&lt;</code><code>/a</code><code>&gt;</code><code>&lt;</code><code>/p</code><code>&gt;</code>
+                    <code>&lt;</code><code style="color: blue;">div</code><code style="color: orange;"> class=</code><code style="color: cornflowerblue;">"collapse"</code><code style="color: blue;"> id=</code><code style="color: cornflowerblue;">"collapseExample"</code><code>&gt;</code><code>&lt;</code><code style="color: blue;">div</code><code style="color: orange;"> class=</code><code style="color: cornflowerblue;">"card"</code><code>&gt;</code><code>&lt;</code><code style="color: blue;">div</code><code style="color: orange;"> class=</code><code style="color: cornflowerblue;">"card-body"</code><code>&gt;</code>
+                    Butona basıp tıklamamız yeterli olacaktır.
+                    <code>&lt;</code><code style="color: blue;">/div</code><code><code>&gt;</code>
+                </pre>
+                <div class="container">
+                    <p>
+                        <a class="btn btn-dark" data-toggle="collapse" href="#collapseExample">
+                            Butona tıklayınız. Lütfen.
+                        </a>
+                       
+                    </p>
+                    <div class="collapse" id="collapseExample">
+                        <div class="card">
+                            <div class="card-body">
+                               Aşağıda açılmasını sağlıyor bizim göstermek ya da gizlemek istediğimiz içeriği.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h4 class="fw-bold text-warning">Açıldığında eksi kapandığında artı değerini gösteren Bootstrap 4 collapse sınıfı ile oluşturulmuş içerikleri gösterme/gizleme işlemi:</h4>
+                <p class="fs-4 text-white fw-bold"> <strong>Tıklandığında gösterilmesini istediğiniz her şeyi bu şekilde yaparak hem alan açısından hem de görüntü açısından iyi bir şey elde edilebilir.Body etiketlerimizin arasına yazıyoruz. </strong></p>
+                <pre class="fs-4"><code>&lt;</code><code style="color:blue;">div</code> <code style="color: cornflowerblue;">class=</code><code style="color: orange;">"container-fluid"</code><code >&gt;<code>&lt;</code><code>div</code><code style="color: cornflowerblue;">class=</code><code style="color: orange;">"accordion"</code><code>id=</code accordionExample<code>&gt;</code><code>div</code><code>class=</code><code>"card"</code><code>&lt;</code><code>div</code><code>class=</code><code  style="color:blue;">"card-header"</code><code>&lt;</code><code  style="color:blue;">button</code><code>class=</code><code style="color: orange;">"btn btn-link"</code><code>data-toggle=</code><code>"collapse"</code><code  style="color:blue;">data-target=</code><code>"#collapseTwo"</code><code>&lt;</code><code>i</code><code>class=</code><code>"fa fa-plus"</code><code>&gt;</code><code style="color: orange;">collapse sınıfı</code><code>&lt;</code><code  style="color:blue;">/button</code><code>&gt;</code><code>&lt;</code><code  style="color: orange;">/div</code><code>&gt;</code><code>&lt;</code><code>div</code><code>class=</code><code  style="color:blue;">"collapse"</code><code style="color: orange;">id=</code><code>"collapse Two"</code><code style="color: orange;">data-parent=</code><code>"#accordionExample</code>
+                    <code>&lt;</code><code>div</code> <code>class=</code> <code style="color:blue;">"card-body"</code><code>buraya ikinci panel girecektir.</code><code>&lt;</code><code style="color: orange;">/div</code><code>&gt;</code><code>&lt;</code><code style="color: orange;">div</code><code style="color:blue;">class=</code><code>"card"</code><code>&gt;</code><code>&lt;</code><code>div</code><code>class=</code><code style="color: orange;">"card-header"</code><code>&gt;</code><code>&lt;</code><code  style="color:blue;">button</code><code style="color: orange;">class=</code><code>"btn btn-link"</code><code  style="color:blue;">data-toggle=</code><code style="color: orange;">"collapse"</code><code>data-target=</code><code>"#collapseThree</code><code>&gt;</code><code>&lt;</code><code>i</code><code  style="color:blue;">class=</code><code>"fa fa-plus</code><code>&lt;</code><code>/i</code><code>&gt;</code><code>burası da üçüncü kısım</code><code>&lt;</code><code  style="color:blue;">/button</code><code>&gt;</code><code>&lt;</code><code style="color: orange;">/div</code><code>&gt;</code> 
+                </pre>
+                <div class="border border-top-0"></div>
+                <div class="card">
+                    <div class="card-header">
+                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseTwo">
+                            Burada butonumuzun adını veririz.
+                        </button>
+                    </div>
+                    <div class="collapse" id="collapseTwo" data-parent="#accordionExample">
+                        <div class="card-body">
+                           Bu panel hem yer açısından hemde gösel açıdan sayfamızı iyi bir hale getirir.
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseThree">
+                            Bu da ikinci kısım
+                        </button>
+                    </div>
+                    <div class="collapse" id="collapseThree" data-parent="#accordionExample">
+                        <div class="card-body">
+                            Hocam kodların hepsi bana aittir.
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid">
+                    <div class="accordion" id="accordionExample">
+                
+                        <div class="card">
+                            <div class="card-header">
+                                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne">
+                                    <i class="fa fa-plus"></i> açılıp kapanma operatör değerlerini almış olur.
+                                </button>
+                            </div>
+                            <div class="collapse show" id="collapseOne" data-parent="#accordionExample">
+                                <div class="card-body">
+                                    <ul>
+                                        <li>böyle şeyler de eklenebilir.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+            </div>
+        </div>
+</body>
+</html>
